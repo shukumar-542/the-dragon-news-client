@@ -5,19 +5,15 @@ import { Col, Container, Row } from 'react-bootstrap';
 import LeftSide from '../Pages/Shared/LeftSide';
 import RightSide from '../Pages/Shared/RightSide';
 import { Outlet } from 'react-router-dom';
-import NavigationBar from '../Pages/Shared/NavigationBar';
 
-const Main = () => {
+const NewsLayout = () => {
     return (
         <div>
-            <Header></Header>
-            <NavigationBar></NavigationBar>
+              <Header></Header>
             <Container>
                 <Row>
-                    <Col lg={3}>
-                        <LeftSide></LeftSide>
-                    </Col>
-                    <Col lg={6}>
+                    
+                    <Col lg={9}>
                         <Outlet></Outlet>
                     </Col>
                     <Col lg={3}><RightSide></RightSide></Col>
@@ -29,4 +25,4 @@ const Main = () => {
     );
 };
 
-export default Main;
+export default NewsLayout;
